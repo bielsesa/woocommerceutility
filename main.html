@@ -7,50 +7,28 @@
     <title>Document</title>
     <link href="./tailwind.css" rel="stylesheet" />
   </head>
-  <body>
-    <div class="container mx-auto px-4 m-5">
-      <div class="grid grid-cols-3 gap-4">
-        <div class="mb-4 relative">
-          <input
-            class="input border border-yellow-400 appearance-none rounded w-full px-3 py-3 pt-5 pb-2 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
-            id="order-id"
-            type="text"
-          />
-          <label
-            for="order-id"
-            class="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-400 text-base mt-2 cursor-text"
-            >Order Id</label
-          >
-        </div>
-        <div>
-          <button
-            class="bg-yellow-600 text-white p-2 pr-3 pl-3 rounded-md tracking-wide shadow"
-          >
-            Submit
-          </button>
-        </div>
+ <body class="antialiased sans-serif bg-gray-300">
+  <div class="mx-auto ml-10 mr-10 py-16">
+    
+    <div id="orderRequestInfo">
+      
+      <label for="orderId" class="label block font-bold mb-1">Order ID</label>
+      <input id="orderId" type="text" class="border border-transparent shadow px-4 py-2 leading-normal text-gray-700 bg-white rounded-md focus:outline-none focus:shadow-outline" />
+      <button id="btnGetOrder" type="button" class="rounded-full focus:outline-none focus:shadow-outline inline-flex p-2 shadow bg-blue-800 text-white font-bold pl-2 pr-2 ml-3">Get</button>
+      
+    </div>   
+    
+    <div id="orderResponseInfo" class="flex gap-4 mt-5">  
+      
+      <div id="json-viewer" class="rounded bg-white w-max order-first p-3 flex-grow">
+        JSON
+      </div>  
+      
+      <div id="important-fields" class="rounded bg-white w-max order-last p-3 flex-grow">
+        Important fields
       </div>
+      
     </div>
-    <style>
-      .input {
-        transition: border 0.2s ease-in-out;
-        min-width: 280px;
-      }
-
-      .input:focus + .label,
-      .input:active + .label,
-      .input.filled + .label {
-        font-size: 0.75rem;
-        transition: all 0.2s ease-out;
-        top: -0.1rem;
-        color: #667eea;
-      }
-
-      .label {
-        transition: all 0.2s ease-out;
-        top: 0.4rem;
-        left: 0;
-      }
-    </style>
-  </body>
+  </div>
+</body>
 </html>
