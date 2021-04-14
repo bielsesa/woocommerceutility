@@ -10,7 +10,7 @@ function createMainWindow () {
       nodeIntegration: true
     }
   });
-  win.loadFile('main.html');
+  win.loadFile('login.html');
 }
 app.whenReady().then(createMainWindow);
 // When all windows are closed exit the app, except in macOS.
